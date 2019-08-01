@@ -14,6 +14,7 @@
 #include <mutex>                //  mutex
 #include <thread>               //  thread()
 #include <condition_variable>   //  condition_variable
+#include <functional>
 #include <pcap.h>               //  pcap_pkthdr
 
 #include "pcapng_blocks.hpp"    //  EnhancedPacketBlock
