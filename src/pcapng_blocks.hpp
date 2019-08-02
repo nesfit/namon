@@ -378,8 +378,8 @@ public:
     unsigned int writtenBytes = 0;
     string appname;
     for (auto app : g_finalResults) {
-      uint8_t size = app.first.length();
       appname = app.first;
+      uint8_t size = appname.length();
 #ifdef _WIN32 // windows appname is in quotes
 /*
             if (appname[0] == '"')
@@ -428,6 +428,7 @@ public:
     file.seekp(pos_blockTotalLength);
     file.write(reinterpret_cast<char *>(&blockTotalLength),
                sizeof(blockTotalLength));
+    file.flush();
   }
 };
 
